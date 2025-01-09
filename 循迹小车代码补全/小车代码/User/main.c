@@ -4,6 +4,8 @@
 #include "PWM.h"
 #include "Motor.h"
 #include "xunji.h"
+#include "Serial.h"
+#include <string.h>
 
 
 uint8_t lukou = 0;
@@ -19,13 +21,17 @@ int main(void)
 	cunchu1=xzhou;
 	cunchu2=yzhou;
 	while (1)
-	{//此处添加蓝牙任务一入口
-	 if(LightSensor_Get3() == 1)
-	 {
+	{
+		if (Serial_RxFlag == 1)
+		{
+		if (strcmp(Serial_RxPacket,"project1") == 0)
+		{
+		if(LightSensor_Get3() == 1)
+		{
 		if(LightSensor_Get1()==0)
 		{
 		void gottoward();
-		}//直行
+		}
 		if(LightSensor_Get1()==1)
 		{
 			Delay_ms(300);
@@ -48,8 +54,10 @@ int main(void)
 			}
 		} 
 	 }
-	 //添加蓝牙任务三入口
-	 //if 判断路线1
+	}
+ }
+	 if (strcmp(Serial_RxPacket,"project31") == 0)
+	 {
 	     
 		 if(LightSensor_Get3() == 1)
 		 {
@@ -160,8 +168,8 @@ int main(void)
 			void turnlift();
 			Delay_s(1);
 			void gottoward();
-			 
-           } 
-	       }
-		 }
+			} 
+	      }
+	   }
+	  }	 //路线一
 }

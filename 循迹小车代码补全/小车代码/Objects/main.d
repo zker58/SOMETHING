@@ -33,3 +33,6 @@
 .\objects\main.o: .\Hardware\PWM.h
 .\objects\main.o: .\Hardware\Motor.h
 .\objects\main.o: .\Hardware\xunji.h
+.\objects\main.o: .\Hardware\Serial.h
+.\objects\main.o: D:\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\main.o: D:\ARM\ARMCC\Bin\..\include\string.h
