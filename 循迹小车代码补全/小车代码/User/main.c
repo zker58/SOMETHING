@@ -67,10 +67,12 @@ int main(void)
 		   }
 		   if(LightSensor_Get1()==1)
 		   {
+			   Delay_s(1);
 			    lukou++;
 		   }
 		     if(LightSensor_Get5()==1)
 		   {
+			    Delay_s(1);
 			    lukou2++;
 		   }
 			if(lukou == 3)
@@ -78,34 +80,29 @@ int main(void)
 			
 			void turnlift();
 			Delay_s(1);				
-			void gottoward();
 			}				
 			if(lukou == 5)
 			 {
 			void turnlift();
-			Delay_s(1);
-			void gottoward();		
+			Delay_s(1);		
 			 }
 			if(lukou == 7)
 			{
 			
 			void turnright();
 			Delay_s(1);
-			void gottoward();
 			}
 			if(lukou == 11)
 			{
 			
 			void turnright();
 			Delay_s(1);
-			void gottoward();
 			lukou2 = 0;
 			}
 			if(lukou2 == 1)
 			{
 			void turnright();
 			Delay_s(1);
-			void gottoward();
 			lukou2 = 50;
 			}
 			if(lukou == 14)
@@ -113,55 +110,47 @@ int main(void)
 			
 			void turnright();
 			Delay_s(1);
-			void gottoward();
 				
 		    }
 			if(lukou == 15)
 			 {
 			void turnlift();
 			Delay_s(1);
-			void gottoward();
 			lukou2=2;
 			 }
 			 if(lukou == 17)
 			 {
 			void turnright();
 			Delay_s(1);
-			void gottoward();
 			lukou2=2;
 			 }
 			 if(lukou2 == 3)
 			{
 			void turnright();
 			Delay_s(1);
-			void gottoward();
 				lukou2=50;
 			}
 			 if(lukou == 20)
 			 {
 			void turnlift();
 			Delay_s(1);
-			void gottoward();
 			 }
 			 if(lukou == 21)
 			 {
 			void turnright();
 			Delay_s(1);
-			void gottoward();
 			lukou2 = 4;	 
 			 }
 			if(lukou2 == 5)
 			{
 			void turnright();
 			Delay_s(1);
-			void gottoward();
 			lukou2 =50;
 			}
 			if(lukou == 23)
 			 {
 			void turnlift();
 			Delay_s(1);
-			void gottoward();
 			 }
 			 if(lukou == 25)
 			 {
@@ -170,6 +159,202 @@ int main(void)
 			void gottoward();
 			} 
 	      }
-	   }
-	  }	 //路线一
+	   }//结束路线1；4
+	 if (strcmp(Serial_RxPacket,"project32") == 0)//路线2
+	 {
+	  if(LightSensor_Get3() == 1)
+	  {
+	   if(LightSensor_Get1()==0)
+		   {
+		        void gottoward();
+		   }
+		   if(LightSensor_Get1()==1)
+		   { 
+			   Delay_s(1);
+			    lukou++;
+		   }
+		     if(LightSensor_Get5()==1)
+		   {
+			    Delay_s(1);
+			    lukou2++;
+		   }
+		   if(lukou == 1)
+		   {
+			turnlift();
+			 Delay_s(1);
+		   }
+		     if(lukou == 2)
+		   {
+			turnright();
+			 Delay_s(1);
+		   }
+		     if(lukou == 5)
+		   {
+			turnlift();
+			 Delay_s(1);
+		   }
+		     if(lukou == 6)
+		   {
+			turnlift();
+			 Delay_s(1);
+		   }
+		     if(lukou == 8)
+		   {
+			turnright();
+			 Delay_s(1);
+		   }
+		     if(lukou == 10)
+		   {
+			turnright();
+			 Delay_s(1);
+		   }
+		    if(lukou == 13)
+		   {
+			turnlift();
+			 Delay_s(1);
+		   }
+		    if(lukou == 14)
+		   {
+			turnlift();
+			 Delay_s(1);
+		   }
+		    if(lukou == 16)
+		   {
+			turnright();
+			 Delay_s(1);
+		   }
+		    if(lukou == 18)
+		   {
+			turnright();
+			 Delay_s(1);
+			 lukou2=0;
+			 if (lukou2 == 3)
+			  {
+			 turnright();
+			 Delay_s(1);
+			  }
+		   }
+			  if(lukou == 24)
+		   {
+			turnright();
+			 Delay_s(1);
+		   }
+		  }
+  }//路线2完成
+	 if (strcmp(Serial_RxPacket,"project32") == 0)//路线3，路线三我从下往上走澳
+	 {
+	  if(LightSensor_Get3() == 1)
+	  {
+	   if(LightSensor_Get1()==0)
+		   {
+		        void gottoward();
+		   }
+		   if(LightSensor_Get1()==1)
+		   { 
+			   Delay_s(1);
+			    lukou++;
+		   }
+		     if(LightSensor_Get5()==1)
+		   {
+			    Delay_s(1);
+			    lukou2++;
+		   }
+		   if(lukou == 5)
+		   {
+			turnlift();
+			 Delay_s(1);
+		   }
+		   if(lukou == 6)
+		   {
+			turnlift();
+			 Delay_s(1);
+		   }
+		   if(lukou == 8)
+		   {
+			turnright();
+			 Delay_s(1);
+		   }
+		   if(lukou == 10)
+		   {
+			turnright();
+			 Delay_s(1);
+		   }
+		   if(lukou == 12)
+		   {
+			turnlift();
+			 Delay_s(1);
+		   }
+		   if(lukou == 13)
+		   {
+			turnlift();
+			 Delay_s(1);
+		   }
+		   if(lukou == 14)
+		   {
+			turnright();
+			 Delay_s(1);
+		   }
+		   if(lukou == 16)
+		   {
+			turnright();
+			 Delay_s(1);
+		   }
+		   if(lukou == 19)
+		   {
+			turnlift();
+			 Delay_s(1);
+		   }
+		   if(lukou == 20)
+		   {
+			turnlift();
+			 Delay_s(1);
+		   }
+		   if(lukou == 25)
+		   {
+			turnlift();
+			 Delay_s(1);
+		   }
+		   if(lukou == 26)
+		   {
+			turnlift();
+			 Delay_s(1);
+		   }
+		   if(lukou == 28)
+		   {
+			turnright();
+			 Delay_s(1);
+		   }
+		   if(lukou == 30)
+		   {
+			turnlift();
+			 Delay_s(1);
+		   }
+		   if(lukou == 32)
+		   {
+			turnlift();
+			 Delay_s(1);
+		   }
+		   if(lukou == 33)
+		   {
+			turnlift();
+			 Delay_s(1);
+		   }
+		   if(lukou == 34)
+		   {
+			turnright();
+			 Delay_s(1);
+		   }
+		   if(lukou == 36)
+		   {
+			turnright();
+			 Delay_s(1);
+		   }
+		   if(lukou == 39)
+		   {
+			turnlift();
+			 Delay_s(1);
+		   }
+        }
+      }//路线3王结束
+ }	 
 }

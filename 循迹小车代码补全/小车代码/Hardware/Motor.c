@@ -108,6 +108,24 @@ void gotback()//倒退
 	GPIO_SetBits(GPIOA,GPIO_Pin_12);
 	 pwm_SetCompare3(50);
 }
+void zuozheng(void)//向左偏离路线修正4号口与三号口一起检测到高电平，或者只有4号检测到高电平。
+{
+	GPIO_SetBits(GPIOB,GPIO_Pin_13);
+	GPIO_ResetBits(GPIOA,GPIO_Pin_8);
+	 pwm_SetCompare2(50);
+	GPIO_SetBits(GPIOB,GPIO_Pin_5);
+	GPIO_ResetBits(GPIOA,GPIO_Pin_12);
+	 pwm_SetCompare3(45);
 
+}
+void youzheng(void)//同上
+{
+	GPIO_SetBits(GPIOB,GPIO_Pin_13);
+	GPIO_ResetBits(GPIOA,GPIO_Pin_8);
+	 pwm_SetCompare2(45);
+	GPIO_SetBits(GPIOB,GPIO_Pin_5);
+	GPIO_ResetBits(GPIOA,GPIO_Pin_12);
+	 pwm_SetCompare3(50);
 
+}
 

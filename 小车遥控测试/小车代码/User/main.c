@@ -6,14 +6,25 @@
 #include "xunji.h"
 #include "Serial.h"
 #include "string.h"
+uint8_t shuzi =0;
 
 int main(void)
 {
+	OLED_Init();
+	xunji_int();
+	
 	while (1)
 	{
+		
+		if(LightSensor_Get1()==1)
+		{
+			
+			shuzi++;
+		}
+		OLED_ShowNum(1,1,shuzi,5);
 		if (Serial_RxFlag == 1)		
 		{		
-			/*将收到的数据包与预设的指令对比，以此决定将要执行的操作*/
+			
 			if (strcmp(Serial_RxPacket, "Turnlift") == 0)			
 			{
 				 turnlift();								
@@ -37,7 +48,13 @@ int main(void)
 						
 			}
 			
-			Serial_RxFlag = 0;			//处理完成后，需要将接收数据包标志位清零，否则将无法接收后续数据包
+			Serial_RxFlag = 0;
+			
+			
+			
+			
+	
+			
 		}
 	}
 }

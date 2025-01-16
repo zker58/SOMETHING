@@ -7,4 +7,6 @@ void gottoward(void);
 void turnlift(void);
 void turnright(void);
 void stop(void);
+void zuozheng(void);
+void youzheng(void);
 #endif

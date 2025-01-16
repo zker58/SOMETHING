@@ -4,6 +4,7 @@
 
 
 
+
 void xunji_int(void)//循迹初始化
 {	
 RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);	
